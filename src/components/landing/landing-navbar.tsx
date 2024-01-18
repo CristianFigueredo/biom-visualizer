@@ -16,7 +16,7 @@ export const LandingNavbar = () => {
       </Link>
       <div className='flex items-center gap-x-2'>
         <Link to='/dashboard'>
-          <Button className='premium' variant='bordered' color='black'>
+          <Button className='premium' variant='bordered'>
             Go to Dashboard
           </Button>
         </Link>
