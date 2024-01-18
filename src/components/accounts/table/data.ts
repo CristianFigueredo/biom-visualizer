@@ -1,3 +1,8 @@
+import biom from './biom.json';
+import { BIOM, Lineage } from './types';
+
+const rawData = biom as BIOM;
+
 export const columns = [
   { name: 'NAME', uid: 'name' },
   { name: 'TAX ID', uid: 'taxID' },
@@ -6,19 +11,41 @@ export const columns = [
   { name: 'U. M. FREQUENCY', uid: 'uniqueMatchesFrequency' },
 ];
 
-const bacteriaPlaceholder = {
-  name: 'Lactobacillus crispatus SJ-3C-US',
-  taxID: '575598',
-  abundanceScore: '139028.29',
-  relativeAbundance: '94.43%',
-  uniqueMatchesFrequency: '1362',
+const convertDecimalToPercentage = (decimalNumber: number): string => {
+  const percentage = (decimalNumber * 100).toFixed(2);
+  return `${percentage}%`;
 };
 
-export type Bacteria = typeof bacteriaPlaceholder;
+const adaptBiomObject = (biom: BIOM): Bacteria[] => {
+  const dataMap = new Map();
 
-export const bacterias = Array(100)
-  .fill(null)
-  .map((_, index) => ({
-    ...bacteriaPlaceholder,
-    key: String(index),
-  })) as ({ key: string } & Bacteria)[];
+  biom.data.forEach(([rowIndex, colIndex, value]) => {
+    const id = `${rowIndex}${colIndex}`;
+    dataMap.set(id, value);
+  });
+
+  return biom.rows.map((row, index) => {
+    const lineage: Lineage[] = row.metadata.lineage;
+    const strainLevel = lineage[7];
+
+    return {
+      name: row.metadata.title,
+      taxID: String(strainLevel.tax_id),
+      abundanceScore: String(dataMap.get(`${index}1`).toFixed(2)),
+      relativeAbundance: convertDecimalToPercentage(dataMap.get(`${index}0`)),
+      uniqueMatchesFrequency: String(dataMap.get(`${index}2`)),
+    };
+  });
+};
+export type Bacteria = {
+  name: string;
+  taxID: string;
+  abundanceScore: string;
+  relativeAbundance: string;
+  uniqueMatchesFrequency: string;
+};
+
+export const bacterias = adaptBiomObject(rawData).map((bacteria, index) => ({
+  ...bacteria,
+  key: String(index),
+})) as ({ key: string } & Bacteria)[];
