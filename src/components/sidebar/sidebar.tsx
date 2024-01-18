@@ -44,7 +44,7 @@ export const SidebarWrapper = () => {
                 title='Repository'
                 onClick={() =>
                   window.open(
-                    'https://www.github.com/CristianFigueredo/biome-visualizer',
+                    'https://www.github.com/CristianFigueredo/biom-visualizer',
                     '_blank'
                   )
                 }
@@ -54,7 +54,7 @@ export const SidebarWrapper = () => {
                 title='Source Code'
                 onClick={() =>
                   window.open(
-                    'https://stackblitz.com/github/CristianFigueredo/biome-visualizer',
+                    'https://stackblitz.com/github/CristianFigueredo/biom-visualizer',
                     '_blank'
                   )
                 }
