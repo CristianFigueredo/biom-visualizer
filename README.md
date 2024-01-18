@@ -1,11 +1,8 @@
-# NextUI + TanStack router + Tailwind CSS + TypeScript Starter and Boilerplate
+# BIOM Visualizer
 
-## Features
-
-This repository is 🔋 battery packed with:
+## Ingredients
 
 - ⚛️ React 18
-- ⚡️ File router powered by [TanStack Router](https://tanstack.com/router/)
 - ✨ TypeScript
 - ⚡️ Stylish NextUI created by @vercel inc.
 - 💨 Tailwind CSS
@@ -19,18 +16,9 @@ This repository is 🔋 battery packed with:
   - 🤖 Conventional Commit Lint
 - 👷 Github Actions — Lint your code on PR
 - 📝 MIT License
+- ⚡️ File router powered by [TanStack Router](https://tanstack.com/router/)
 
 ## Getting Started
-
-### Clone this template using one of the three ways
-
-- Use this repository as template
-
-  **Disclosure:** by using this repository as a template, there will be an attribution on your repository.
-
-  I'll appreciate if you do, so this template can be known by others too 😄
-
-  [Use this template](https://github.com/new?template_name=nextui-tsr-template&template_owner=kxxoling)
 
 ### Install dependencies
 
@@ -69,7 +57,3 @@ npx vite preview --outDir ./html
 ```sh
 pnpm build
 ```
-
-### Deploy to Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fkxxoling%2Fnextui-tsr-template)
