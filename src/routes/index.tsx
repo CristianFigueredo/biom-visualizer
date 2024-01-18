@@ -9,10 +9,10 @@ export const Route = new FileRoute('/').createRoute({
 
 function HomeComponent() {
   return (
-    <main className='min-h-screen h-full bg-[#111827] overflow-auto'>
-      <div className='mx-auto max-w-screen-xl h-full w-full'>
-        <div className='h-full '>
-          <LandingNavbar />
+    <main className='min-h-screen h-full bg-white overflow-auto'>
+      <div className='mx-auto max-w-screen-xl  h-full w-full'>
+        <LandingNavbar />
+        <div className='w-full h-full mt-10'>
           <LandingHero />
         </div>
       </div>
