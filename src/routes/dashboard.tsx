@@ -6,7 +6,12 @@ import { Layout } from '@/components/layout/layout';
 
 function DashboardComponent() {
   return (
-    <NextThemesProvider defaultTheme='dark' attribute='class' enableSystem>
+    <NextThemesProvider
+      themes={['light']}
+      defaultTheme='light'
+      attribute='class'
+      enableSystem
+    >
       <NextUIProvider>
         <Layout>
           <Outlet />
