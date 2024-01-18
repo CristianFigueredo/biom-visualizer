@@ -1,3 +1,4 @@
+import React from 'react';
 import { Outlet, rootRouteWithContext } from '@tanstack/react-router';
 
 import type { Auth } from '@/libs/auth';
@@ -5,8 +6,7 @@ import type { Auth } from '@/libs/auth';
 const TanStackRouterDevtools =
   process.env.NODE_ENV === 'production'
     ? () => null // Render nothing in production
-    : // @ts-expect-error - Lazy load in development
-      React.lazy(() =>
+    : React.lazy(() =>
         // Lazy load in development
         import('@tanstack/router-devtools').then((res) => ({
           default: res.TanStackRouterDevtools,
