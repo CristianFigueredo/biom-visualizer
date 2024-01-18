@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 import { SidebarContext } from './layout-context';
 import { useLockedBody } from '../hooks/useBodyLock';
-import { NavbarWrapper } from '../navbar/navbar';
 import { SidebarWrapper } from '../sidebar/sidebar';
 
 interface Props {
@@ -26,7 +25,7 @@ export const Layout = ({ children }: Props) => {
     >
       <section className='flex'>
         <SidebarWrapper />
-        <NavbarWrapper>{children}</NavbarWrapper>
+        {children}
       </section>
     </SidebarContext.Provider>
   );
