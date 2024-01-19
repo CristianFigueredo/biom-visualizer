@@ -8,7 +8,7 @@ export const columns = [
   { name: 'TAX ID', uid: 'taxID' },
   { name: 'ABUNDANCE SCORE', uid: 'abundanceScore' },
   { name: 'RELATIVE ABUNDANCE', uid: 'relativeAbundance' },
-  { name: 'U. M. FREQUENCY', uid: 'uniqueMatchesFrequency' },
+  { name: 'HIT FREQUENCY', uid: 'hitFrequency' },
 ];
 
 const convertDecimalToPercentage = (decimalNumber: number): string => {
@@ -30,11 +30,11 @@ const adaptBiomObject = (biom: BIOM): Bacteria[] => {
     const strainLevel = lineage[7];
 
     return {
-      name: row.metadata.title,
+      name: strainLevel.name,
       taxID: String(strainLevel.tax_id),
       abundanceScore: String(dataMap.get(`${index}1`).toFixed(2)),
       relativeAbundance: convertDecimalToPercentage(dataMap.get(`${index}0`)),
-      uniqueMatchesFrequency: String(dataMap.get(`${index}2`)),
+      hitFrequency: String(dataMap.get(`${index}2`)),
     };
   });
 };
@@ -43,7 +43,7 @@ export type Bacteria = {
   taxID: string;
   abundanceScore: string;
   relativeAbundance: string;
-  uniqueMatchesFrequency: string;
+  hitFrequency: string;
 };
 
 export const bacterias = adaptBiomObject(rawData).map((bacteria, index) => ({
