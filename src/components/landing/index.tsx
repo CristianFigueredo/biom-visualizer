@@ -4,7 +4,7 @@ import TypewriterComponent from 'typewriter-effect';
 
 import Logo from '@/assets/logo.png';
 
-const title = 'BIOME Visualizer';
+const title = 'BIOM Visualizer';
 const typeWriterStrings = [
   'Developed by Cristian',
   'React.js + Vite',
