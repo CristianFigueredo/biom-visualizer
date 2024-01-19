@@ -13,6 +13,7 @@ export const columns = [
 
 const convertDecimalToPercentage = (decimalNumber: number): string => {
   const percentage = (decimalNumber * 100).toFixed(2);
+  if (percentage === '0.00') return '< 0.01%';
   return `${percentage}%`;
 };
 
