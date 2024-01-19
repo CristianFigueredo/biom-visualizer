@@ -1,8 +1,7 @@
-import React from 'react';
 import { Outlet, rootRouteWithContext } from '@tanstack/react-router';
+import React from 'react';
 
 const TanStackRouterDevtools =
-  // TODO: install types for node
   process.env.NODE_ENV === 'production'
     ? () => null // Render nothing in production
     : React.lazy(() =>

@@ -1,6 +1,7 @@
-import TypewriterComponent from 'typewriter-effect';
 import { Button, Image } from '@nextui-org/react';
 import { Link } from '@tanstack/react-router';
+import TypewriterComponent from 'typewriter-effect';
+
 import Logo from '@/assets/logo.png';
 
 const title = 'BIOME Visualizer';

@@ -1,12 +1,12 @@
 import { Image } from '@nextui-org/react';
-import { MapPin, User, Github, FileJson } from 'lucide-react';
+import { FileJson, Github, MapPin, User } from 'lucide-react';
+
+import Logo from '@/assets/logo.png';
 
 import { Sidebar } from './sidebar.styles';
 import { SidebarItem } from './sidebar-item';
 import { SidebarMenu } from './sidebar-menu';
 import { useSidebarContext } from '../layout/layout-context';
-
-import Logo from '@/assets/logo.png';
 
 export const SidebarWrapper = () => {
   const { collapsed } = useSidebarContext();

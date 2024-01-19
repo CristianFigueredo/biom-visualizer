@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import { SidebarContext } from './layout-context';
-import { useLockedBody } from '../../hooks/useBodyLock';
 import { SidebarWrapper } from '../sidebar/sidebar';
+import { useLockedBody } from '../../hooks/useBodyLock';
 
 interface Props {
   children: React.ReactNode;

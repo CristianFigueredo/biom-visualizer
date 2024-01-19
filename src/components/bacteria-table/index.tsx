@@ -7,7 +7,7 @@ import {
   TableRow,
 } from '@nextui-org/react';
 
-import { columns, bacterias, Bacteria } from './data';
+import { Bacteria, bacterias, columns } from './data';
 
 export const BacteriaTable = () => {
   return (
