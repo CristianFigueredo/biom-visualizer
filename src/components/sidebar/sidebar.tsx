@@ -16,7 +16,14 @@ export const SidebarWrapper = () => {
       <div className={Sidebar({ collapsed: collapsed })}>
         <div className={Sidebar.Header()}>
           <div className='flex items-center gap-2'>
-            <Image className=' w-[40px] h-[40px]' src={Logo} alt='logo' />
+            <Image
+              onClick={() => {
+                window.open('/', '_self');
+              }}
+              className='w-[40px] h-[40px] hover:cursor-pointer'
+              src={Logo}
+              alt='logo'
+            />
             <div className='flex flex-col gap-4'>
               <h3 className='text-xl font-medium m-0 text-default-900 -mb-4 whitespace-nowrap'>
                 By Cristian
