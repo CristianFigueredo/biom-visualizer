@@ -1,5 +1,5 @@
 import biom from './biom.json';
-import { BIOM, Lineage } from './types';
+import { BIOM, Lineage } from '@/types/general';
 
 const rawData = biom as BIOM;
 

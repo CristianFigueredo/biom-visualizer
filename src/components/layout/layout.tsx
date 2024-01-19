@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { SidebarContext } from './layout-context';
-import { useLockedBody } from '../hooks/useBodyLock';
+import { useLockedBody } from '../../hooks/useBodyLock';
 import { SidebarWrapper } from '../sidebar/sidebar';
 
 interface Props {

@@ -2,8 +2,6 @@ import { Router, RouterProvider } from '@tanstack/react-router';
 import ReactDOM from 'react-dom/client';
 import './main.css';
 
-import { auth } from '@/libs/auth';
-
 import { routeTree } from '@/routeTree.gen';
 
 // Set up a Router instance
@@ -12,7 +10,7 @@ const router = new Router({
   defaultPreload: 'intent',
   defaultPendingComponent: () => <div>Loading...</div>,
   defaultErrorComponent: ({ error }) => <div>{error.message}</div>,
-  context: { auth },
+  context: {},
 });
 
 // Register things for type-safety

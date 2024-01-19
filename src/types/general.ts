@@ -11,15 +11,15 @@ export interface BIOM {
   data: number[][];
   rows: Row[];
   columns: Column[];
-  metadata: Metadata2;
-}
-
-export interface Row {
-  id: string;
   metadata: Metadata;
 }
 
-export interface Metadata {
+interface Row {
+  id: string;
+  metadata: RowMetadata;
+}
+
+interface RowMetadata {
   taxonomy: string[];
   tax_id: number;
   title: string;
@@ -34,12 +34,12 @@ export interface Lineage {
   tax_id: number;
 }
 
-export interface Column {
+interface Column {
   id: string;
   metadata: unknown;
 }
 
-export interface Metadata2 {
+interface Metadata {
   analysis_id: string;
   name: string;
   database: string;

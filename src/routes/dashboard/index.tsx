@@ -1,9 +1,9 @@
 import { FileRoute } from '@tanstack/react-router';
 
-import { Content } from '@/components/home/content';
+import { BacteriaTable } from '@/components/bacteria-table';
 
 function DashboardIndexComponent() {
-  return <Content />;
+  return <BacteriaTable />;
 }
 
 export const Route = new FileRoute('/dashboard/').createRoute({

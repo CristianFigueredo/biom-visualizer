@@ -8,10 +8,8 @@ import {
 } from '@nextui-org/react';
 
 import { columns, bacterias, Bacteria } from './data';
-import { RenderCell } from './render-cell';
 
-// More examples: https://nextui.org/docs/components/table
-export const TableWrapper = () => {
+export const BacteriaTable = () => {
   return (
     <Table
       shadow='none'
@@ -31,12 +29,7 @@ export const TableWrapper = () => {
           return (
             <TableRow>
               {(columnKey: unknown) => (
-                <TableCell>
-                  {RenderCell({
-                    item,
-                    columnKey: columnKey as keyof Bacteria,
-                  })}
-                </TableCell>
+                <TableCell>{item[columnKey as keyof Bacteria]}</TableCell>
               )}
             </TableRow>
           );
