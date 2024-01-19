@@ -16,7 +16,7 @@ export function LandingPageComponent() {
   return (
     <main className='min-h-screen h-full  overflow-auto'>
       <div className='mx-auto max-w-screen-xl  h-full w-full'>
-        <nav className='p-4  bg-transparent flex items-center justify-between'>
+        <nav className='p-4  bg-transparent flex items-center justify-between mb-[12%]'>
           <Link to='/' className='flex items-center'>
             <div className='relative h-9 w-9 mr-4'>
               <Image
@@ -36,7 +36,7 @@ export function LandingPageComponent() {
             </Link>
           </div>
         </nav>
-        <div className='w-full h-full mt-10'>
+        <div className='w-full h-full'>
           <div className='text-white font-bold py-36 text-center space-y-5'>
             <div className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl space-y-5'>
               <h1 className='text-black font-light'>{title}</h1>
